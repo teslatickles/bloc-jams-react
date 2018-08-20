@@ -12,7 +12,8 @@ class Album extends Component {
     this.state = {
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      hovered: null
     };
 
     this.audioElement = document.createElement("audio");
@@ -46,7 +47,20 @@ class Album extends Component {
     }
   }
 
+  handleHover(song) {
+    this.setState({ hovered: song });
+  }
+
+  handleNoHover() {
+    this.setState({ hovered: null });
+  }
+
   render() {
+    const isSameSong = this.state.currentSong === song;
+    const song = this.state.album.songs.map(song => song);
+    const trackNumber = this.state.album.songs.map((song, array) => array);
+    const isHovered = this.state.hovered;
+
     return (
       <section className="album">
         <section id="album-info">
@@ -71,12 +85,30 @@ class Album extends Component {
             {this.state.album.songs.map((song, array) => (
               <tr
                 className="song"
-                key={song.title}
+                key={array}
                 onClick={() => this.handleSongClick(song)}
+                onMouseEnter={() => this.handleHover(song)}
+                onMouseLeave={() => this.handleNoHover()}
               >
-                <td>{array + 1}.</td>
+                <td>
+                  {this.state.currentSong !== song ? (
+                    this.state.hovered === song ? (
+                      <span className="far fa-play-circle" />
+                    ) : (
+                      array + 1
+                    )
+                  ) : (
+                    <span
+                      className={
+                        this.state.isPlaying
+                          ? "far fa-pause-circle"
+                          : "far fa-play-circle"
+                      }
+                    />
+                  )}
+                </td>
                 <td>{song.title}</td>
-                <td>{song.duration} seconds</td>
+                <td>({song.duration} seconds)</td>
               </tr>
             ))}
           </tbody>
