@@ -56,11 +56,6 @@ class Album extends Component {
   }
 
   render() {
-    const isSameSong = this.state.currentSong === song;
-    const song = this.state.album.songs.map(song => song);
-    const trackNumber = this.state.album.songs.map((song, array) => array);
-    const isHovered = this.state.hovered;
-
     return (
       <section className="album">
         <section id="album-info">
@@ -85,7 +80,7 @@ class Album extends Component {
             {this.state.album.songs.map((song, array) => (
               <tr
                 className="song"
-                key={array}
+                key={song.title}
                 onClick={() => this.handleSongClick(song)}
                 onMouseEnter={() => this.handleHover(song)}
                 onMouseLeave={() => this.handleNoHover()}
