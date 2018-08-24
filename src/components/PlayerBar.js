@@ -6,7 +6,7 @@ class PlayerBar extends Component {
       <section className="player-bar">
         <section id="buttons">
           <button id="previous" onClick={this.props.handlePrevClick}>
-            <span className="fas fa-backward" />
+            <span id="back-track" className="fas fa-backward" />
           </button>
           <button id="play-pause" onClick={this.props.handleSongClick}>
             <span
@@ -14,7 +14,7 @@ class PlayerBar extends Component {
             />
           </button>
           <button id="next" onClick={this.props.handleNextClick}>
-            <span className="fas fa-forward" />
+            <span id="forward-track" className="fas fa-forward" />
           </button>
         </section>
         <section id="time-control">

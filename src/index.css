@@ -1,5 +1,65 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  margin: 5;
+  padding: 2;
+  font-family: Fira Code;
+  background-color: burlywood;
+}
+h1 {
+  font-weight: bold;
+  color: goldenrod;
+}
+h2 {
+  font-weight: bolder;
+  color: green;
+}
+p {
+  color: brown;
+}
+#album-cover-art {
+  height: 525px;
+  position: absolute;
+  top: 175px;
+  left: 15px;
+}
+#song-list {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  color: #134f8c;
+  position: absolute;
+  left: 50%;
+}
+.player-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+tr:nth-child(even) {
+  background-color: gray;
+}
+.artist {
+  position: absolute;
+  top: 15px;
+}
+#album-title {
+  position: absolute;
+  top: 50px;
+}
+#release-info {
+  position: absolute;
+  top: 105px;
+  font-size: 11px;
+}
+#back-track {
+  padding: 25px;
+  color: indianred;
+  background-color: black;
+}
+#forward-track {
+  padding: 25px;
+  color: indianred;
+}
+#play-pause {
+  padding: 25px;
+  border-radius: 10px;
+  color: darkred;
 }
