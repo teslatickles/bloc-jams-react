@@ -2,11 +2,12 @@ body {
   margin: 5;
   padding: 2;
   font-family: Fira Code;
-  background-color: burlywood;
+  background-color: #3f3d44;
 }
 h1 {
   font-weight: bold;
   color: goldenrod;
+  font-size: 24px;
 }
 h2 {
   font-weight: bolder;
@@ -15,51 +16,114 @@ h2 {
 p {
   color: brown;
 }
+button {
+  border-radius: 50px;
+}
+button:focus {
+  outline: 0;
+}
 #album-cover-art {
-  height: 525px;
+  height: 555px;
   position: absolute;
-  top: 175px;
-  left: 15px;
+  top: 75px;
+  left: 48px;
 }
 #song-list {
   font-family: "Roboto", sans-serif;
-  font-size: 28px;
-  color: #134f8c;
+  font-size: 18px;
+  color: beige;
   position: absolute;
-  left: 50%;
+  left: 46%;
+  top: 40%;
+  width: 50%;
 }
 .player-bar {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: 0%;
+  border-top: solid;
+  padding: 17px;
+  width: 100%;
+}
+.divider {
+  width: 5px;
+  height: auto;
+  display: inline-block;
 }
 tr:nth-child(even) {
-  background-color: gray;
+  background-color: #3f3d44;
+}
+tr:nth-child(odd) {
+  background-color: #504f53;
+}
+th,
+td {
+  padding: 8px;
 }
 .artist {
   position: absolute;
-  top: 15px;
+  top: 28%;
+  left: 46%;
+  font-size: 18px;
 }
 #album-title {
   position: absolute;
-  top: 50px;
+  top: 5%;
+  left: 45%;
+  font-size: 70px;
+  font-weight: bold;
+  color: lightcoral;
 }
 #release-info {
   position: absolute;
-  top: 105px;
+  top: 25%;
+  left: 46%;
   font-size: 11px;
 }
 #back-track {
-  padding: 25px;
-  color: indianred;
-  background-color: black;
+  padding: 15px;
+  color: brown;
+  cursor: pointer;
+  text-align: center;
 }
 #forward-track {
-  padding: 25px;
-  color: indianred;
+  padding: 15px;
+  color: brown;
+  cursor: pointer;
+  text-align: center;
 }
 #play-pause {
-  padding: 25px;
-  border-radius: 10px;
-  color: darkred;
+  padding: 17px;
+  color: brown;
+  cursor: pointer;
+  text-align: center;
+}
+table {
+  table-layout: fixed;
+  width: 25%;
+  border-collapse: collapse;
+}
+#volume-control {
+  position: absolute;
+  right: 25%;
+  bottom: 15%;
+}
+div.current-time {
+  color: beige;
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+}
+div.total-time {
+  color: beige;
+  position: absolute;
+  bottom: 15%;
+  right: 40%;
+}
+.seek-bar {
+  padding: 8px;
+}
+.routes {
+  color: beige;
+  padding: 5px;
+  text-decoration: none;
 }

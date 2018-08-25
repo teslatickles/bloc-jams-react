@@ -5,16 +5,37 @@ class PlayerBar extends Component {
     return (
       <section className="player-bar">
         <section id="buttons">
-          <button id="previous" onClick={this.props.handlePrevClick}>
-            <span id="back-track" className="fas fa-backward" />
+          <button
+            id="previous"
+            className="mdc-fab"
+            aria-label="skip_previous"
+            fastonClick={this.props.handlePrevClick}
+          >
+            <span id="back-track" className="mdc-fab__icon material-icons">
+              skip_previous
+            </span>
           </button>
-          <button id="play-pause" onClick={this.props.handleSongClick}>
-            <span
-              className={this.props.isPlaying ? "fas fa-pause" : "fas fa-play"}
-            />
+          <div class="divider" />
+          <button
+            id="play-pause"
+            className="mdc-fab"
+            aria-label="play_pause"
+            onClick={this.props.handleSongClick}
+          >
+            <span className="mdc-fab__icon material-icons">
+              {this.props.isPlaying ? "pause" : "play_arrow"}
+            </span>
           </button>
-          <button id="next" onClick={this.props.handleNextClick}>
-            <span id="forward-track" className="fas fa-forward" />
+          <div class="divider" />
+          <button
+            id="next"
+            className="mdc-fab"
+            aria-label="skip_next"
+            onClick={this.props.handleNextClick}
+          >
+            <span id="forward-track" className="mdc-fab__icon material-icons">
+              skip_next
+            </span>
           </button>
         </section>
         <section id="time-control">
@@ -38,7 +59,7 @@ class PlayerBar extends Component {
           <div className="fas fa-volume-down" />
           <input
             type="range"
-            className="seek-bar"
+            className="volume-bar"
             value={this.props.volume || 0}
             max="1"
             min="0"
