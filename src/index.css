@@ -1,17 +1,20 @@
 body {
-  margin: 5;
-  padding: 2;
+  margin: auto;
   font-family: Fira Code;
   background-color: #3f3d44;
 }
 h1 {
+  display: block;
   font-weight: bold;
   color: goldenrod;
   font-size: 24px;
+  width: auto;
 }
 h2 {
+  display: block;
   font-weight: bolder;
   color: green;
+  width: auto;
 }
 p {
   color: brown;
@@ -23,21 +26,26 @@ button:focus {
   outline: 0;
 }
 #album-cover-art {
-  height: 555px;
-  position: absolute;
-  top: 75px;
-  left: 48px;
+  display: block;
+  height: 575px;
+  position: fixed;
+  top: 6%;
+  left: 2%;
+  width: auto;
 }
 #song-list {
+  display: float;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: beige;
   position: absolute;
-  left: 46%;
+  margin: auto;
+  left: 45%;
   top: 40%;
   width: 50%;
 }
 .player-bar {
+  display: block;
   position: absolute;
   bottom: 0%;
   border-top: solid;
@@ -60,24 +68,30 @@ td {
   padding: 8px;
 }
 .artist {
-  position: absolute;
+  display: float;
+  position: fixed;
   top: 28%;
   left: 46%;
   font-size: 18px;
+  width: auto;
 }
 #album-title {
+  display: block;
   position: absolute;
   top: 5%;
   left: 45%;
   font-size: 70px;
   font-weight: bold;
   color: lightcoral;
+  width: auto;
 }
 #release-info {
+  display: block;
   position: absolute;
   top: 25%;
   left: 46%;
   font-size: 11px;
+  width: auto;
 }
 #back-track {
   padding: 15px;
@@ -98,6 +112,7 @@ td {
   text-align: center;
 }
 table {
+  display: float;
   table-layout: fixed;
   width: 25%;
   border-collapse: collapse;
